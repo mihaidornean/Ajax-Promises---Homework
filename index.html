@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js" defer></script>
+</head>
+<body id="body">
+    <header>
+        <img class="m-0 p-0" src="https://images6.alphacoders.com/508/508277.png" width="100%" height="400px" alt="img">
+        <nav id="navbar">
+            <ul>
+                <li><a href=""><i class="fa fa-home"></i></a></li>
+                <li class="ml-3"><a id="postLink" href="">Add a new game</a></li>
+                <li class="ml-3"><a href="https://games-app-siit.herokuapp.com/regenerate-games" target="_blank">Regenerate Games</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="preloader" class="hide text-center">
+            <h1>Loading...</h1>
+        </div>
+        <div id="games-container">
+            <div class="d-flex flex-wrap" id="game-collection"></div>
+        </div>
+        <div id="detailed-selected" class="mt-4">
+            <div id="selected-game" class="container"></div>
+        </div>
+        <div class="container">
+            <form id="postForm" class="text-center" method="POST" class="mt-3">
+                <h1 id="postTitle" class="m-3">Add game</h1>
+                <div class="postingInput">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Title: </span>
+                        </div>
+                        <input type="text" name="title" id="title" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                </div>
+                <div class="postingInput">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Genre:</span>
+                        </div>
+                        <input type="text" name="genre" id="genre" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                </div>
+                <div class="postingInput">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Publisher: </span>
+                        </div>
+                        <input type="text" name="publisher" id="publisher" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                </div>
+                <div class="postingInput">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Image (URL): </span>
+                        </div>
+                        <input type="text" name="imageUrl" id="imageUrl" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                </div>
+                <div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Description</span>
+                        </div>
+                        <textarea class="form-control" name="description" id="description" aria-label="With textarea"></textarea>
+                      </div>
+                </div>
+                <button id="postButton" class="btn btn-primary btn-lg btn-block mt-3 mb-5" type="submit">Post</button>
+            </form>
+        </div>
+    </main>
+</body>
+<footer>
+    &copy; Copyright 2020 GAMES API
+</footer>
+</html>
